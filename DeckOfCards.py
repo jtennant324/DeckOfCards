@@ -30,7 +30,7 @@ class Deck:
 
     def deal(self, num_cards):
         if num_cards > len(self.deck):
-            raise ValueError("Not enough cards left in the deck to deal that many.")
+            raise ValueError("Not enough cards remaining. Try again.")
         dealt_cards = self.deck[:num_cards]
         self.deck = self.deck[num_cards:]
         return dealt_cards
@@ -81,4 +81,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
